@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кабинет восприятия — Атласы невидимого, т. IV</title>
+  <meta name="description" content="Интерактивный научно-популярный атлас о психологии восприятия: иллюзии контраста, формы, движения и размера, двойственные фигуры, кляксы Роршаха и слепота невнимания.">
+  <meta name="theme-color" content="#e2d9c3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=PT+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e2d9c3'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23121212' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23121212' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23121212'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip mono" href="#toc">К оглавлению</a>
+
+<header class="runhead mono">
+  <div class="runhead-in">
+    <a class="shelf-link" href="https://dmitrylelee.github.io/atlas/">← к полке</a>
+    <span class="runhead-code">Атласы невидимого · Т. IV · 159.937</span>
+    <button type="button" class="btn btn-calm" id="calmToggle" aria-pressed="false" title="Остановить все движущиеся и мерцающие стимулы">без движения</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ============ Титул ============ -->
+  <section class="hero wrap" aria-labelledby="title">
+    <div class="hero-art" aria-hidden="true"><svg id="heroArt" viewBox="-1.05 -1.05 2.1 2.1"></svg></div>
+    <div class="hero-text">
+      <p class="mono kicker">Том IV · психология восприятия</p>
+      <h1 id="title" class="title">Кабинет<br>восприятия</h1>
+      <p class="lede">Мозг не фотографирует мир, а&nbsp;достраивает его: по&nbsp;контрасту, по&nbsp;ожиданию, по&nbsp;опыту. В&nbsp;этом кабинете вы&nbsp;— испытуемый. Каждая глава сначала вас обманет, а&nbsp;потом объяснит, как это вышло.</p>
+    </div>
+
+    <form class="blank mono" aria-label="Бланк испытуемого" onsubmit="return false">
+      <div class="blank-head"><span>Бланк № <b id="subjNo">—</b></span><span>форма П-4</span></div>
+      <label class="field"><span>Испытуемый</span><input id="subjName" type="text" autocomplete="off" placeholder="можно без имени" maxlength="40"></label>
+      <div class="field"><span>Дата опыта</span><output id="subjDate">—</output></div>
+      <div class="field"><span>Стимулов</span><output>14 · в 7 главах</output></div>
+      <p class="blank-note">Инструкция: отвечайте быстро и честно, как видите, а&nbsp;не как «должно быть». Ответы хранятся только в&nbsp;вашем браузере.</p>
+      <span class="stamp stamp-r" aria-hidden="true">испытуемый</span>
+    </form>
+
+    <p class="notice"><b>Это научно-популярный материал, а&nbsp;не психологическая диагностика.</b> Ни&nbsp;один опыт в&nbsp;атласе ничего не говорит о&nbsp;вашей личности, здоровье или способностях.</p>
+  </section>
+
+  <!-- ============ Оглавление ============ -->
+  <nav class="toc wrap" id="toc" aria-labelledby="toc-h">
+    <h2 id="toc-h" class="sec-h"><span class="mono">§ 0</span> Порядок опыта</h2>
+    <ol class="toc-list">
+      <li><a href="#ch1"><span class="mono">01</span> Контраст и&nbsp;яркость</a></li>
+      <li><a href="#ch2"><span class="mono">02</span> Форма и&nbsp;достраивание</a></li>
+      <li><a href="#ch3"><span class="mono">03</span> Движение, которого нет <em class="mono">⚠ движение</em></a></li>
+      <li><a href="#ch4"><span class="mono">04</span> Длина и&nbsp;размер</a></li>
+      <li><a href="#ch5"><span class="mono">05</span> Двойственные фигуры</a></li>
+      <li><a href="#ch6"><span class="mono">06</span> Проекция</a></li>
+      <li><a href="#ch7"><span class="mono">07</span> Слепота невнимания <em class="mono">⚠ движение</em></a></li>
+      <li><a href="#protocol"><span class="mono">П.</span> Протокол испытуемого</a></li>
+    </ol>
+    <p class="mono legend">Пометки на полях: <span class="mark mark-yes">доказано</span> — устойчивый эффект, воспроизводится; <span class="mark mark-no">спорно</span> — интерпретации, кризис воспроизводимости, проективные тесты.</p>
+  </nav>
+
+  <!-- ============ Глава 1 ============ -->
+  <div class="divider" data-kind="waves" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch1" aria-labelledby="ch1-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 01</p>
+      <h2 id="ch1-h">Контраст и&nbsp;яркость</h2>
+      <p class="ch-lede">Глаз не измеряет свет. Он сравнивает соседей и&nbsp;делает поправку на&nbsp;тень.</p>
+    </header>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-adelson">
+          <figcaption class="stim-bar mono"><span>Стимул № 1</span><span>Шахматная доска Адельсона</span></figcaption>
+          <div class="stim-view"><canvas id="adelson" role="img" aria-label="Шахматная доска, на которую падает тень от цилиндра. Клетка A — тёмная, вне тени; клетка B — светлая, в тени."></canvas></div>
+          <div class="stim-ctrl">
+            <p class="q mono">Вопрос 1. Какая клетка темнее?</p>
+            <div class="choices" data-key="adelson" role="group" aria-label="Какая клетка темнее">
+              <button type="button" class="btn" data-val="A">A темнее</button>
+              <button type="button" class="btn" data-val="B">B темнее</button>
+              <button type="button" class="btn" data-val="равны">одинаковые</button>
+            </div>
+            <button type="button" class="btn btn-ink" id="adelsonReveal" aria-pressed="false">проявить</button>
+            <p class="result mono" id="adelsonOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <figure class="stim" id="stim-sc">
+          <figcaption class="stim-bar mono"><span>Стимул № 2</span><span>Одновременный контраст</span></figcaption>
+          <div class="stim-view"><canvas id="simcontrast" role="img" aria-label="Два одинаковых серых квадрата на фоне, который плавно темнеет слева направо."></canvas></div>
+          <div class="stim-ctrl">
+            <label class="slider mono"><span>Контекст (фон)</span><input type="range" id="scCtx" min="0" max="100" value="100"><output id="scCtxOut">100%</output></label>
+            <button type="button" class="btn btn-ink" id="scReveal">проявить</button>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>Клетки A и&nbsp;B на&nbsp;экране закрашены одним и&nbsp;тем&nbsp;же серым — это можно проверить пипеткой в&nbsp;любом графическом редакторе. Но&nbsp;зрительная система решает другую задачу: не «сколько света пришло от&nbsp;пятна», а&nbsp;«какого цвета поверхность». Для этого она вычитает освещение. Клетка B лежит в&nbsp;тени, значит «на&nbsp;самом деле» она светлая; A освещена, значит тёмная. Вывод верен для реального мира — и&nbsp;поэтому ошибочен для картинки.</p>
+          <p>Одновременный контраст работает проще: серое на&nbsp;тёмном кажется светлее, на&nbsp;светлом — темнее. Ещё в&nbsp;1839&nbsp;году химик Шеврёль описал его, разбираясь, почему гобелены на&nbsp;фабрике Гобеленов «тускнеют» рядом с&nbsp;определёнными красками.</p>
+        </div>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Эффекты одновременного контраста и&nbsp;«тени Адельсона» воспроизводятся у&nbsp;подавляющего большинства зрителей и&nbsp;измеряются методом подбора яркости.</p>
+        <p><span class="mark mark-no">спорно</span> Механизм. Одни объясняют эффект латеральным торможением в&nbsp;сетчатке и&nbsp;ранней коре, другие — «бессознательным умозаключением» об&nbsp;освещении (Гельмгольц), третьи — теорией «якорей» яркости. Скорее всего, работают несколько уровней сразу.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 01</summary>
+      <ol>
+        <li>Adelson E. H. Lightness perception and lightness illusions // Gazzaniga M. (ed.) The New Cognitive Neurosciences. 2nd ed. MIT Press, 2000. P. 339–351.</li>
+        <li>Gilchrist A. et al. An anchoring theory of lightness perception // Psychological Review. 1999. Vol. 106, № 4. P. 795–834.</li>
+        <li>Chevreul M. E. De la loi du contraste simultané des couleurs. Paris, 1839.</li>
+        <li>Helmholtz H. von. Handbuch der physiologischen Optik. Leipzig, 1867.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 2 ============ -->
+  <div class="divider" data-kind="rings" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch2" aria-labelledby="ch2-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 02</p>
+      <h2 id="ch2-h">Форма и&nbsp;достраивание</h2>
+      <p class="ch-lede">Из&nbsp;обрывков мозг собирает целое — и&nbsp;видит края там, где их никто не рисовал.</p>
+    </header>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-kanizsa">
+          <figcaption class="stim-bar mono"><span>Стимул № 3</span><span>Треугольник Канижи</span></figcaption>
+          <div class="stim-view"><svg id="kanizsa" viewBox="0 0 400 350" role="img" aria-label="Три чёрных круга с вырезанными секторами и три уголка. Большинство людей видят белый треугольник поверх них."></svg></div>
+          <div class="stim-ctrl">
+            <p class="q mono">Вопрос 2. Видите белый треугольник, который ярче фона?</p>
+            <div class="choices" data-key="kanizsa" role="group" aria-label="Видите ли треугольник">
+              <button type="button" class="btn" data-val="да">да</button>
+              <button type="button" class="btn" data-val="нет">нет</button>
+            </div>
+            <label class="slider mono"><span>Повернуть «пакманы»</span><input type="range" id="kzRot" min="0" max="180" value="0"><output id="kzRotOut">0°</output></label>
+            <label class="slider mono"><span>Замкнуть контуры</span><input type="range" id="kzClose" min="0" max="100" value="0"><output id="kzCloseOut">0%</output></label>
+          </div>
+        </figure>
+
+        <figure class="stim" id="stim-gestalt">
+          <figcaption class="stim-bar mono"><span>Стимул № 4</span><span>Гештальт: близость и сходство</span></figcaption>
+          <div class="stim-view"><svg id="gestalt" viewBox="0 0 400 260" role="img" aria-label="Решётка точек; расстояния между ними меняются ползунком."></svg></div>
+          <div class="stim-ctrl">
+            <label class="slider mono"><span>Близость</span><input type="range" id="gsProx" min="-100" max="100" value="0"><output id="gsProxOut">0</output></label>
+            <label class="check mono"><input type="checkbox" id="gsSim"> <span>Сходство: зачернить каждый второй столбец</span></label>
+            <p class="result mono" id="gsOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>Треугольника нет: есть три круга с&nbsp;вырезами и&nbsp;три уголка. Но&nbsp;простейшее объяснение такой сцены — «сверху лежит белый треугольник и&nbsp;заслоняет фигуры». Мозг принимает эту гипотезу настолько уверенно, что дорисовывает контур и&nbsp;даже делает треугольник чуть ярче фона. Нейроны зрительной зоны V2 у&nbsp;обезьян отвечают на&nbsp;такие иллюзорные края почти как на&nbsp;настоящие.</p>
+          <p>Поверните «пакманы» — и&nbsp;вырезы перестают складываться в&nbsp;одну фигуру: гипотеза «заслонения» больше ничего не объясняет, и&nbsp;треугольник исчезает. Замкните контуры — и&nbsp;каждый круг становится самостоятельным предметом.</p>
+          <p>Гештальт-психологи 1920-х описали правила такой сборки: <b>близость</b> (что рядом, то&nbsp;вместе), <b>сходство</b> (одинаковое группируется), <b>замкнутость</b>, <b>хорошее продолжение</b>. В&nbsp;стимуле № 4 точки сами собираются то&nbsp;в&nbsp;строки, то&nbsp;в&nbsp;столбцы — хотя вы ничего не решали.</p>
+        </div>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Иллюзорные контуры и&nbsp;группировка по&nbsp;близости и&nbsp;сходству устойчиво воспроизводятся; есть нейрофизиологические корреляты (V1/V2).</p>
+        <p><span class="mark mark-no">спорно</span> «Законы» гештальта — скорее описания, чем теория: как они взаимодействуют, когда противоречат друг другу, и&nbsp;как их измерять количественно, до&nbsp;сих пор обсуждают.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 02</summary>
+      <ol>
+        <li>Kanizsa G. Margini quasi-percettivi in campi con stimolazione omogenea // Rivista di Psicologia. 1955. Vol. 49. P. 7–30.</li>
+        <li>Wertheimer M. Untersuchungen zur Lehre von der Gestalt II // Psychologische Forschung. 1923. Bd. 4. S. 301–350.</li>
+        <li>von der Heydt R., Peterhans E., Baumgartner G. Illusory contours and cortical neuron responses // Science. 1984. Vol. 224. P. 1260–1262.</li>
+        <li>Wagemans J. et al. A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure–ground organization // Psychological Bulletin. 2012. Vol. 138, № 6. P. 1172–1217.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 3 ============ -->
+  <div class="divider" data-kind="checker" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch3" aria-labelledby="ch3-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 03</p>
+      <h2 id="ch3-h">Движение, которого нет</h2>
+      <p class="ch-lede">Неподвижная картинка может «вращаться», если правильно расставить в&nbsp;ней чёрное, серое и&nbsp;белое.</p>
+    </header>
+
+    <div class="warning" role="note">
+      <p class="mono warning-h">Внимание · светочувствительность</p>
+      <p>В&nbsp;этой главе — контрастные повторяющиеся узоры и&nbsp;иллюзорное движение. Людям со&nbsp;светочувствительной или паттерн-чувствительной эпилепсией, мигренью или склонностью к&nbsp;укачиванию лучше смотреть статичный вариант. Стимулы не&nbsp;запускаются сами — только по&nbsp;вашей кнопке.</p>
+      <div class="warning-act">
+        <button type="button" class="btn" data-calm-set="on">смотреть без движения</button>
+      </div>
+    </div>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-snakes">
+          <figcaption class="stim-bar mono"><span>Стимул № 5</span><span>Вращающиеся змеи (по Китаоке)</span></figcaption>
+          <div class="stim-view gated" id="snakesView">
+            <canvas id="snakes" role="img" aria-label="Диски из колец, составленных из повторяющихся чёрных, красных, белых и серых сегментов. При взгляде боковым зрением кольца кажутся вращающимися."></canvas>
+            <div class="gate" id="snakesGate">
+              <p class="mono">Стимул скрыт</p>
+              <button type="button" class="btn btn-ink" id="snakesShow">показать стимул</button>
+            </div>
+          </div>
+          <div class="stim-ctrl">
+            <p class="q mono">Вопрос 3. Смотрите на&nbsp;точку в&nbsp;центре одного диска. Соседние диски двигаются?</p>
+            <div class="choices" data-key="snakes" role="group" aria-label="Двигались ли диски">
+              <button type="button" class="btn" data-val="да">да, вращаются</button>
+              <button type="button" class="btn" data-val="слегка">слегка</button>
+              <button type="button" class="btn" data-val="нет">нет</button>
+            </div>
+            <button type="button" class="btn btn-calm-local" data-calm-toggle aria-pressed="false">успокоить</button>
+            <p class="result mono" id="snakesOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <figure class="stim" id="stim-moire">
+          <figcaption class="stim-bar mono"><span>Стимул № 6</span><span>Муар</span></figcaption>
+          <div class="stim-view"><canvas id="moire" role="img" aria-label="Две системы тонких концентрических колец, наложенные со сдвигом; в местах наложения возникают крупные тёмные полосы."></canvas></div>
+          <div class="stim-ctrl">
+            <label class="slider mono"><span>Сдвиг второй сетки</span><input type="range" id="moShift" min="0" max="100" value="18"><output id="moShiftOut">18</output></label>
+            <button type="button" class="btn btn-ink" id="moPlay" aria-pressed="false">запустить движение</button>
+            <p class="result mono" id="moOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>Картинка на&nbsp;экране неподвижна. Иллюзия «периферийного дрейфа» возникает из-за&nbsp;того, что нейроны обрабатывают яркие и&nbsp;тёмные, контрастные и&nbsp;неконтрастные участки с&nbsp;немного разной скоростью. Когда последовательность «чёрный → тёмный → белый → светлый» повторяется по&nbsp;кругу, эти задержки складываются в&nbsp;ложный сигнал движения — от&nbsp;чёрного к&nbsp;тёмному, от&nbsp;белого к&nbsp;светлому. Сигнал «перезапускают» микросаккады и&nbsp;моргания: поэтому диск, на&nbsp;который вы смотрите прямо, стоит, а&nbsp;соседние плывут.</p>
+          <p>В&nbsp;режиме «успокоить» порядок яркостей становится симметричным: чёрный → серый → белый → серый. Узор почти тот&nbsp;же, но&nbsp;«направления» в&nbsp;нём больше нет, и&nbsp;дрейф исчезает. Это лучшее доказательство, что вращение создаёт именно асимметрия яркостей.</p>
+          <p>Муар — не&nbsp;иллюзия мозга, а&nbsp;физика наложения: две частые решётки дают крупную «биение»-полосу, которая при малом сдвиге бежит быстро и&nbsp;далеко. Глаз замечает именно её, а&nbsp;не&nbsp;сами тонкие линии.</p>
+        </div>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Периферийный дрейф видит большинство людей; в&nbsp;зрительной коре обезьян найдены нейроны, отвечающие на&nbsp;такой статичный узор как на&nbsp;движение.</p>
+        <p><span class="mark mark-no">спорно</span> Точный вклад микросаккад, морганий и&nbsp;временных задержек обсуждается. Сила эффекта сильно различается от&nbsp;человека к&nbsp;человеку; часть людей не&nbsp;видит его вовсе.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 03</summary>
+      <ol>
+        <li>Fraser A., Wilcox K. J. Perception of illusory movement // Nature. 1979. Vol. 281. P. 565–566.</li>
+        <li>Kitaoka A., Ashida H. Phenomenal characteristics of the peripheral drift illusion // Vision. 2003. Vol. 15, № 4. P. 261–262.</li>
+        <li>Conway B. R. et al. Neural basis for a powerful static motion illusion // Journal of Neuroscience. 2005. Vol. 25, № 23. P. 5651–5656.</li>
+        <li>Otero-Millan J., Macknik S. L., Martinez-Conde S. Microsaccades and blinks trigger illusory rotation in the “rotating snakes” illusion // Journal of Neuroscience. 2012. Vol. 32, № 17. P. 6043–6051.</li>
+        <li>Oster G., Nishijima Y. Moiré patterns // Scientific American. 1963. Vol. 208, № 5. P. 54–63.</li>
+        <li>Fisher R. S. et al. Photic- and pattern-induced seizures: a review for the Epilepsy Foundation of America Working Group // Epilepsia. 2005. Vol. 46, № 9. P. 1426–1441.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 4 ============ -->
+  <div class="divider" data-kind="waves" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch4" aria-labelledby="ch4-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 04</p>
+      <h2 id="ch4-h">Длина и&nbsp;размер</h2>
+      <p class="ch-lede">Мини-эксперимент: подгоните отрезок «на&nbsp;глаз», а&nbsp;кабинет измерит вашу ошибку.</p>
+    </header>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-ml">
+          <figcaption class="stim-bar mono"><span>Стимул № 7</span><span>Мюллер-Лайер</span></figcaption>
+          <div class="stim-view"><svg id="ml" viewBox="0 0 400 220" role="img" aria-label="Два горизонтальных отрезка: верхний с расходящимися «хвостами», нижний со стрелками. Длину нижнего можно менять ползунком."></svg></div>
+          <div class="stim-ctrl">
+            <p class="q mono">Задание 4а. Сделайте нижний отрезок равным верхнему (без учёта «стрелок»).</p>
+            <label class="slider mono"><span>Длина нижнего</span><input type="range" id="mlLen" min="110" max="330" value="150" aria-describedby="mlOut"><output id="mlLenOut">·</output></label>
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="mlCheck">зафиксировать</button>
+              <button type="button" class="btn" id="mlAgain">ещё раз</button>
+            </div>
+            <p class="result mono" id="mlOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <figure class="stim" id="stim-eb">
+          <figcaption class="stim-bar mono"><span>Стимул № 8</span><span>Эббингауз</span></figcaption>
+          <div class="stim-view"><svg id="eb" viewBox="0 0 420 220" role="img" aria-label="Два круга: левый окружён крупными кругами, правый — мелкими. Размер правого можно менять ползунком."></svg></div>
+          <div class="stim-ctrl">
+            <p class="q mono">Задание 4б. Сделайте правый центральный круг равным левому.</p>
+            <label class="slider mono"><span>Диаметр правого</span><input type="range" id="ebR" min="8" max="36" step="0.5" value="28"><output id="ebROut">·</output></label>
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="ebCheck">зафиксировать</button>
+              <button type="button" class="btn" id="ebAgain">ещё раз</button>
+            </div>
+            <p class="result mono" id="ebOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <figure class="stim" id="stim-ames">
+          <figcaption class="stim-bar mono"><span>Стимул № 9</span><span>Комната Эймса</span></figcaption>
+          <div class="stim-view ames">
+            <svg id="amesView" viewBox="0 0 400 260" role="img" aria-label="Вид в глазок: прямоугольная комната, человек у дальней стены. При движении вправо он «растёт»."></svg>
+            <svg id="amesPlan" viewBox="0 0 400 260" role="img" aria-label="Вид сверху: на самом деле задняя стена комнаты скошена, левый угол вдвое дальше от глазка, чем правый."></svg>
+          </div>
+          <div class="stim-ctrl">
+            <label class="slider mono"><span>Перевести человека вдоль стены</span><input type="range" id="amesPos" min="0" max="100" value="0"><output id="amesOut">левый угол</output></label>
+            <label class="check mono"><input type="checkbox" id="amesShowPlan" checked> <span>показать план сверху</span></label>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>В&nbsp;иллюзии Мюллер-Лайера отрезки равны, но&nbsp;отрезок с&nbsp;расходящимися «хвостами» кажется длиннее. Обычно люди удлиняют нижний отрезок на&nbsp;10–30&nbsp;%. Ричард Грегори предложил объяснение: «хвосты» похожи на&nbsp;углы комнаты (внутренний угол — дальше) и&nbsp;углы здания (внешний — ближе), и&nbsp;мозг делает поправку на&nbsp;удалённость, которой нет.</p>
+          <p>В&nbsp;иллюзии Эббингауза размер оценивается относительно соседей: среди крупных кругов центральный кажется маленьким, среди мелких — большим.</p>
+          <p>Комната Эймса построена косо: левый угол вдвое дальше правого, но&nbsp;окна и&nbsp;плитки нарисованы так, что из&nbsp;глазка всё выглядит прямоугольным. Мозг уверен, что комната «нормальная», и&nbsp;поэтому объясняет разницу в&nbsp;угловых размерах людей не&nbsp;расстоянием, а&nbsp;ростом.</p>
+        </div>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Иллюзии Мюллер-Лайера и&nbsp;Эббингауза — одни из&nbsp;самых воспроизводимых в&nbsp;психологии; их сила измеряется ровно так, как в&nbsp;вашем опыте, — методом подгонки.</p>
+        <p><span class="mark mark-no">спорно</span> Объяснение Грегори через перспективу и&nbsp;гипотеза «прямоугольного мира» (жители городов подвержены иллюзии сильнее) — классические, но&nbsp;межкультурные данные 1960-х критикуют за&nbsp;методику, а&nbsp;перспективное объяснение не&nbsp;работает для многих вариантов фигуры.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 04</summary>
+      <ol>
+        <li>Müller-Lyer F. C. Optische Urteilstäuschungen // Archiv für Physiologie. 1889. Suppl. S. 263–270.</li>
+        <li>Gregory R. L. Distortion of visual space as inappropriate constancy scaling // Nature. 1963. Vol. 199. P. 678–680.</li>
+        <li>Segall M. H., Campbell D. T., Herskovits M. J. The Influence of Culture on Visual Perception. Bobbs-Merrill, 1966.</li>
+        <li>Henrich J., Heine S. J., Norenzayan A. The weirdest people in the world? // Behavioral and Brain Sciences. 2010. Vol. 33. P. 61–83.</li>
+        <li>Ittelson W. H. The Ames Demonstrations in Perception. Princeton University Press, 1952.</li>
+        <li>Schwarzkopf D. S., Song C., Rees G. The surface area of human V1 predicts the subjective experience of object size // Nature Neuroscience. 2011. Vol. 14. P. 28–30.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 5 ============ -->
+  <div class="divider" data-kind="rings" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch5" aria-labelledby="ch5-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 05</p>
+      <h2 id="ch5-h">Двойственные фигуры</h2>
+      <p class="ch-lede">Одна картинка — два прочтения. Попробуйте удержать одно из&nbsp;них хотя&nbsp;бы полминуты.</p>
+    </header>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-amb">
+          <figcaption class="stim-bar mono"><span id="ambNo">Стимул № 10</span><span id="ambName">Куб Неккера</span></figcaption>
+          <div class="tabs mono" role="tablist" aria-label="Выбор фигуры">
+            <button type="button" role="tab" class="tab" data-fig="necker" aria-selected="true">куб Неккера</button>
+            <button type="button" role="tab" class="tab" data-fig="duck" aria-selected="false">утка-кролик</button>
+            <button type="button" role="tab" class="tab" data-fig="vase" aria-selected="false">ваза Рубина</button>
+          </div>
+          <div class="stim-view"><svg id="amb" viewBox="0 0 400 300" role="img" aria-label="Двойственная фигура"></svg></div>
+          <div class="stim-ctrl">
+            <p class="q mono">Задание 5. Нажмите «старт» и&nbsp;отмечайте каждое переключение восприятия (кнопкой или пробелом) в&nbsp;течение 30&nbsp;секунд.</p>
+            <div class="counter">
+              <div class="counter-dial mono" aria-hidden="true"><span id="ambTime">30,0</span><small>сек</small></div>
+              <div class="counter-dial mono" aria-hidden="true"><span id="ambCount">0</span><small>переключ.</small></div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="ambStart">старт</button>
+              <button type="button" class="btn btn-big" id="ambFlip" disabled>переключилось!</button>
+              <button type="button" class="btn" id="ambHint" aria-pressed="false">подсказка</button>
+            </div>
+            <p class="result mono" id="ambOut" aria-live="polite"></p>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>Изображение на&nbsp;сетчатке одно и&nbsp;то&nbsp;же, но&nbsp;у&nbsp;него два одинаково хороших толкования. Мозг не&nbsp;может принять оба сразу и&nbsp;не&nbsp;может выбрать навсегда: активное толкование со&nbsp;временем «устаёт» (адаптация), подавленное набирает силу, и&nbsp;восприятие перескакивает. Типичная длительность одного прочтения — несколько секунд, поэтому за&nbsp;30&nbsp;секунд у&nbsp;большинства набирается 5–15&nbsp;переключений; распределение длительностей у&nbsp;разных людей похоже по&nbsp;форме.</p>
+          <p>Кнопка «подсказка» показывает, что переключение можно подтолкнуть: затенённая грань куба, глаз или контур делают одно прочтение сильнее. Намерение «держать» картинку тоже немного помогает — но&nbsp;полностью остановить смену не&nbsp;удаётся почти никому.</p>
+        </div>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Бистабильное восприятие: спонтанные переключения, их характерная статистика и&nbsp;влияние внимания воспроизводятся десятилетиями.</p>
+        <p><span class="mark mark-no">спорно</span> Связь скорости переключений с&nbsp;анатомией мозга: громкая корреляция с&nbsp;толщиной теменной коры (2010) не&nbsp;подтвердилась в&nbsp;предрегистрированной репликации 2015&nbsp;года.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 05</summary>
+      <ol>
+        <li>Necker L. A. Observations on some remarkable optical phænomena seen in Switzerland… // London and Edinburgh Philosophical Magazine. 1832. Vol. 1, № 5. P. 329–337.</li>
+        <li>Jastrow J. The mind’s eye // Popular Science Monthly. 1899. Vol. 54. P. 299–312.</li>
+        <li>Rubin E. Synsoplevede Figurer. København, 1915.</li>
+        <li>Leopold D. A., Logothetis N. K. Multistable phenomena: changing views in perception // Trends in Cognitive Sciences. 1999. Vol. 3, № 7. P. 254–264.</li>
+        <li>Kanai R., Bahrami B., Rees G. Human parietal cortex structure predicts individual differences in perceptual rivalry // Current Biology. 2010. Vol. 20. P. 1626–1630.</li>
+        <li>Boekel W. et al. A purely confirmatory replication study of structural brain-behavior correlations // Cortex. 2015. Vol. 66. P. 115–133.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 6 ============ -->
+  <div class="divider" data-kind="checker" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch6" aria-labelledby="ch6-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 06</p>
+      <h2 id="ch6-h">Проекция</h2>
+      <p class="ch-lede">Бессмысленное пятно туши. Что вы в&nbsp;нём видите?</p>
+    </header>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-blot">
+          <figcaption class="stim-bar mono"><span>Стимул № 13</span><span>Карточка <b id="blotNo">—</b></span></figcaption>
+          <div class="stim-view blot-view"><canvas id="blot" role="img" aria-label="Симметричная клякса туши, сгенерированная случайно."></canvas></div>
+          <div class="stim-ctrl">
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="blotNew">новая клякса</button>
+              <button type="button" class="btn" id="blotBack" disabled>← предыдущая</button>
+            </div>
+            <label class="slider mono"><span>Туши на листе</span><input type="range" id="blotInk" min="0" max="100" value="50"><output id="blotInkOut">50%</output></label>
+            <label class="answer mono" for="blotText">Что вы видите? Первое, что приходит в&nbsp;голову:</label>
+            <textarea id="blotText" class="mono" rows="3" maxlength="400" placeholder="например: две птицы, которые спорят…"></textarea>
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="blotSave">записать в протокол</button>
+              <button type="button" class="btn" id="blotClear">стереть все ответы</button>
+            </div>
+            <p class="small mono">Ответы сохраняются только в&nbsp;этом браузере (localStorage) и&nbsp;никуда не&nbsp;отправляются.</p>
+            <ol class="blot-log mono" id="blotLog" aria-live="polite"></ol>
+          </div>
+        </figure>
+
+        <div class="explain">
+          <h3>Как это вышло</h3>
+          <p>Клякса собрана из&nbsp;случайного шума: алгоритм берёт половину листа, рисует на&nbsp;ней «облако» туши и&nbsp;отражает его по&nbsp;вертикальной оси, будто лист сложили пополам. Смысла в&nbsp;нём нет. Но&nbsp;симметрия — мощная подсказка для зрения: симметричны лица, тела, бабочки. Поэтому вы почти наверняка увидели что-то живое. Это <b>парейдолия</b>: система распознавания объектов работает «с&nbsp;запасом» и&nbsp;охотнее ошибается в&nbsp;сторону «там кто-то есть», чем пропускает реального зверя.</p>
+        </div>
+
+        <aside class="inset" aria-labelledby="inset-h">
+          <p class="mono inset-kicker">Честная врезка</p>
+          <h3 id="inset-h">Тест Роршаха: история и&nbsp;репутация</h3>
+          <p>Швейцарский психиатр Герман Роршах опубликовал десять карточек в&nbsp;1921&nbsp;году. Идея была в&nbsp;том, что по&nbsp;<i>тому, как</i> человек толкует кляксу (целиком или по&nbsp;частям, по&nbsp;форме или по&nbsp;цвету, видит ли движение), можно судить о&nbsp;его мышлении. Тест стал символом психологии XX&nbsp;века.</p>
+          <p>Но&nbsp;его диагностическая ценность спорна. Обзоры 2000-х показали, что многие показатели плохо согласуются между разными психологами, нормы завышали «патологию» у&nbsp;здоровых людей, а&nbsp;связь большинства шкал с&nbsp;реальными чертами личности слабая. Метаанализ 2013&nbsp;года нашёл, что часть переменных (в&nbsp;первую очередь связанные с&nbsp;нарушениями мышления и&nbsp;восприятия) всё&nbsp;же валидна, а&nbsp;многие другие — нет.</p>
+          <p><b>Генератор в&nbsp;этом атласе — не&nbsp;тест.</b> Карточки случайные, ответы никто не&nbsp;интерпретирует. Это игрушка о&nbsp;том, как мозг находит смысл.</p>
+        </aside>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Парейдолия — устойчивое явление: люди систематически видят лица и&nbsp;фигуры в&nbsp;шуме, особенно симметричном; в&nbsp;опытах это видно и&nbsp;по&nbsp;поведению, и&nbsp;по&nbsp;активности мозга.</p>
+        <p><span class="mark mark-no">спорно</span> Тест Роршаха как инструмент диагностики личности: надёжность и&nbsp;валидность большинства шкал оспариваются; проективные методики в&nbsp;целом остаются предметом споров.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 06</summary>
+      <ol>
+        <li>Rorschach H. Psychodiagnostik. Bern: Bircher, 1921.</li>
+        <li>Lilienfeld S. O., Wood J. M., Garb H. N. The scientific status of projective techniques // Psychological Science in the Public Interest. 2000. Vol. 1, № 2. P. 27–66.</li>
+        <li>Wood J. M., Nezworski M. T., Lilienfeld S. O., Garb H. N. What’s Wrong with the Rorschach? Jossey-Bass, 2003.</li>
+        <li>Mihura J. L. et al. The validity of individual Rorschach variables: systematic reviews and meta-analyses of the Comprehensive System // Psychological Bulletin. 2013. Vol. 139, № 3. P. 548–605.</li>
+        <li>Liu J. et al. Seeing Jesus in toast: neural and behavioral correlates of face pareidolia // Cortex. 2014. Vol. 53. P. 60–77.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Глава 7 ============ -->
+  <div class="divider" data-kind="waves" aria-hidden="true"></div>
+  <section class="chapter wrap" id="ch7" aria-labelledby="ch7-h">
+    <header class="ch-head">
+      <p class="mono ch-no">Глава 07</p>
+      <h2 id="ch7-h">Слепота невнимания</h2>
+      <p class="ch-lede">Задача на&nbsp;внимательность. Две команды перебрасывают мяч. Считайте передачи команды <b>в&nbsp;белом</b> — только их.</p>
+    </header>
+
+    <div class="warning" role="note">
+      <p class="mono warning-h">Внимание · движение</p>
+      <p>Опыт — анимация длиной около 25&nbsp;секунд, без вспышек и&nbsp;мерцания. Запускается только кнопкой. Если движение на&nbsp;экране вам неприятно, включите режим «без движения»: вместо ролика будет раскадровка с&nbsp;объяснением.</p>
+      <div class="warning-act">
+        <button type="button" class="btn" data-calm-set="on">смотреть без движения</button>
+      </div>
+    </div>
+
+    <div class="ch-body">
+      <div class="ch-main">
+        <figure class="stim" id="stim-gorilla">
+          <figcaption class="stim-bar mono"><span>Стимул № 14</span><span>Передачи мяча</span></figcaption>
+          <div class="stim-view"><canvas id="court" role="img" aria-label="Площадка с шестью игроками: трое в белом, трое в чёрном, у каждой команды свой мяч."></canvas></div>
+          <div class="stim-ctrl">
+            <div class="row">
+              <button type="button" class="btn btn-ink" id="gStart">начать опыт</button>
+              <button type="button" class="btn" id="gForce" hidden>всё равно запустить ролик</button>
+            </div>
+            <form class="g-form" id="gForm" hidden onsubmit="return false">
+              <label class="answer mono" for="gCount">Сколько передач сделала команда в&nbsp;белом?</label>
+              <input id="gCount" class="mono" type="number" min="0" max="99" inputmode="numeric">
+              <p class="q mono">Заметили ли вы что-нибудь необычное?</p>
+              <div class="choices" data-key="gorillaSeen" role="group" aria-label="Заметили ли необычное">
+                <button type="button" class="btn" data-val="да">да</button>
+                <button type="button" class="btn" data-val="нет">нет</button>
+                <button type="button" class="btn" data-val="не уверен(а)">не уверен(а)</button>
+              </div>
+              <button type="button" class="btn btn-ink" id="gSubmit">сдать ответ</button>
+            </form>
+            <p class="result mono" id="gOut" aria-live="polite"></p>
+            <button type="button" class="btn" id="gReplay" hidden>повторить с подсказкой</button>
+          </div>
+        </figure>
+
+        <div class="explain" id="gExplain" hidden>
+          <h3>Как это вышло</h3>
+          <p>Посреди игры через площадку прошла чёрная «горилла», остановилась в&nbsp;центре и&nbsp;постучала себя в&nbsp;грудь. В&nbsp;знаменитом опыте Дэниела Саймонса и&nbsp;Кристофера Шабри (1999) это был человек в&nbsp;костюме гориллы, и&nbsp;примерно половина зрителей, считавших передачи, её не&nbsp;заметила.</p>
+          <p>Внимание — не&nbsp;прожектор, который освещает всё, на&nbsp;что падает взгляд, а&nbsp;фильтр. Считая белых, вы подавляете всё чёрное — и&nbsp;горилла, чёрная, попадает в&nbsp;подавленную категорию. Когда зрители считают передачи чёрной команды, гориллу замечают заметно чаще. Глаза её «видели», но&nbsp;до&nbsp;осознания она не&nbsp;дошла.</p>
+          <p>Наша анимация упрощена и&nbsp;короче оригинала, к&nbsp;тому&nbsp;же вы читали название главы. Если вы гориллу заметили — это нормально; эффект статистический, он виден на&nbsp;группах, а&nbsp;не&nbsp;предсказывает поведение одного человека.</p>
+        </div>
+        <button type="button" class="btn btn-link mono" id="gSpoiler">показать разбор без опыта</button>
+      </div>
+
+      <aside class="margin" aria-label="Пометки на полях">
+        <p><span class="mark mark-yes">доказано</span> Слепота невнимания многократно воспроизведена, в&nbsp;том числе у&nbsp;экспертов: 83&nbsp;% радиологов не&nbsp;заметили гориллу, вставленную в&nbsp;снимок КТ лёгких.</p>
+        <p><span class="mark mark-no">спорно</span> Кто именно заметит неожиданный объект, почти не&nbsp;предсказывается: связь с&nbsp;объёмом рабочей памяти и&nbsp;чертами личности в&nbsp;больших выборках оказалась слабой или нулевой.</p>
+      </aside>
+    </div>
+
+    <details class="sources">
+      <summary class="mono">Источники главы 07</summary>
+      <ol>
+        <li>Simons D. J., Chabris C. F. Gorillas in our midst: sustained inattentional blindness for dynamic events // Perception. 1999. Vol. 28, № 9. P. 1059–1074.</li>
+        <li>Neisser U., Becklen R. Selective looking: attending to visually specified events // Cognitive Psychology. 1975. Vol. 7. P. 480–494.</li>
+        <li>Mack A., Rock I. Inattentional Blindness. MIT Press, 1998.</li>
+        <li>Most S. B. et al. How not to be seen: the contribution of similarity and selective ignoring to sustained inattentional blindness // Psychological Science. 2001. Vol. 12, № 1. P. 9–17.</li>
+        <li>Drew T., Võ M. L.-H., Wolfe J. M. The invisible gorilla strikes again: sustained inattentional blindness in expert observers // Psychological Science. 2013. Vol. 24, № 9. P. 1848–1853.</li>
+        <li>Kreitz C., Furley P., Memmert D., Simons D. J. Inattentional blindness and individual differences in cognitive abilities // PLoS ONE. 2015. Vol. 10, № 8. e0134675.</li>
+      </ol>
+    </details>
+  </section>
+
+  <!-- ============ Протокол ============ -->
+  <div class="divider" data-kind="rings" aria-hidden="true"></div>
+  <section class="protocol wrap" id="protocol" aria-labelledby="protocol-h">
+    <div class="protocol-sheet mono">
+      <div class="protocol-head">
+        <h2 id="protocol-h">Протокол испытуемого</h2>
+        <span>Бланк № <b data-subj-no>—</b></span>
+      </div>
+      <table class="protocol-table">
+        <thead><tr><th scope="col">Стимул</th><th scope="col">Ваш ответ</th><th scope="col">Как обычно</th></tr></thead>
+        <tbody id="protocolBody"></tbody>
+      </table>
+      <div class="row">
+        <button type="button" class="btn" id="protocolClear">очистить протокол</button>
+        <button type="button" class="btn" onclick="window.print()">распечатать</button>
+      </div>
+      <p class="small">Протокол хранится только в&nbsp;вашем браузере. Он&nbsp;показывает, как вы прошли опыты, и&nbsp;ничего не&nbsp;говорит о&nbsp;вашей личности.</p>
+      <span class="stamp stamp-l" aria-hidden="true">протокол</span>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Колофон ============ -->
+<footer class="colophon wrap" aria-labelledby="colophon-h">
+  <h2 id="colophon-h" class="sec-h"><span class="mono">§ К</span> Колофон</h2>
+  <div class="colophon-grid">
+    <p><strong>Источники.</strong> В&nbsp;каждой главе — оригинальные статьи и&nbsp;обзоры. Утверждение без источника в&nbsp;атлас не&nbsp;попадает.</p>
+    <p><strong>Пометки.</strong> <span class="mark mark-yes">доказано</span> — устойчивый эффект, воспроизводится; <span class="mark mark-no">спорно</span> — интерпретации, кризис воспроизводимости, проективные тесты.</p>
+    <p><strong>Жанр.</strong> Это научно-популярный материал, а&nbsp;не&nbsp;психологическая диагностика. Упрощения неизбежны, и&nbsp;мы стараемся честно о&nbsp;них говорить.</p>
+    <p><strong>Безопасность.</strong> Движущиеся стимулы запускаются только вручную; режим «без движения» и&nbsp;системная настройка «уменьшение движения» заменяют их статичными.</p>
+  </div>
+  <p class="imprint mono">
+    Том IV. Кабинет восприятия. Интерактивные иллюзии и&nbsp;генератор симметричных клякс: мозг проверяет сам себя.
+    Все стимулы нарисованы кодом на&nbsp;Canvas 2D и&nbsp;SVG, без видео и&nbsp;сторонних библиотек.
+    Набрано гротеском Unbounded, антиквой PT Serif и&nbsp;машинописью PT Mono. Оформление — по&nbsp;мотивам оп-арта 1960-х и&nbsp;бланков психологических тестов.
+    <span class="imprint-stamp">Отпечатано в&nbsp;сети · 2026</span>
+  </p>
+  <p class="mono back"><a href="https://dmitrylelee.github.io/atlas/">← вернуть том на&nbsp;полку</a> · <a href="#top">↑ к&nbsp;титулу</a></p>
+</footer>
+
+<p class="sr-only" aria-live="polite" id="live"></p>
+<script src="main.js" defer></script>
+</body>
+</html>
